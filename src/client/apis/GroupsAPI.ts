@@ -765,11 +765,11 @@ export default class GroupsAPI extends BaseAPI {
 
     getGroupRoles (options: GetGroupRolesOptions): Promise<GetGroupRoles> {
         return this.request({
-            requiresAuth: true,
             request: {
                 path: `v1/groups/${options.groupId}/roles`
             },
-            json: true
+            json: true,
+            requiresAuth: false
         })
             .then(response => response.body);
     }
