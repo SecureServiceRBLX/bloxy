@@ -827,7 +827,7 @@ export default class GroupsAPI extends BaseAPI {
 
     getUserGroups (options: GetUserGroupsOptions): Promise<GetUserGroups> {
         return this.request({
-            requiresAuth: true,
+            requiresAuth: false,
             request: {
                 path: `v1/users/${options.userId}/groups/roles`
             },
